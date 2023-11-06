@@ -36,12 +36,17 @@ let courses = [
  }
 ];
 
+
+
+
 // function to dfind course by id
 function findCourseById(courseId) {
     return function(course) {
         return course.CourseId === courseId;
     };
 }
+
+
 
 
 console.log("");
@@ -75,16 +80,20 @@ function findClassesInClassroom(classroom) {
 }
 
 
+//fin classes in classroom1
 console.log("");
-// Find all courses that are in Classroom 1
+console.log("Classes in Classroom 1:");
 let classroom1Courses = courses.filter(findClassesInClassroom("Classroom 1"));
 
 if (classroom1Courses.length > 0) {
-    console.log("Classes in Classroom 1:");
-    classroom1Courses.forEach(course => console.log(course.Title));
+  for (const course of classroom1Courses) {
+    console.log(course.Title);
+  }
 } else {
-    console.log("No classes in Classroom 1");
+  console.log("No classes in Classroom 1");
 }
+
+
 
 console.log("");
 // function to find cheap courses
