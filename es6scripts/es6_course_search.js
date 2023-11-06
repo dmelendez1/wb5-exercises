@@ -52,6 +52,8 @@ if (proj500Course) {
     console.log("Course PROJ500 not found");
 }
 
+
+
 // Output the title of the PROJ500 course
 if (proj500Course) {
     console.log(proj500Course.Title); // Correctly outputs the title 
@@ -59,12 +61,16 @@ if (proj500Course) {
     console.log("Course PROJ500 not found");
 }
 
+
+
 // find classes by their location
 function findClassesInClassroom(classroom) {
     return function(course) {
         return course.Location === classroom;
     };
 }
+
+
 
 // Find all courses that are in Classroom 1
 let classroom1Courses = courses.filter(findClassesInClassroom("Classroom 1"));
@@ -76,6 +82,8 @@ if (classroom1Courses.length > 0) {
     console.log("No classes in Classroom 1");
 }
 
+
+// function to find cheap courses
 function findCheapCourses(course) {
     let fee = parseFloat(course.Fee);
     return fee <= 50.00;
