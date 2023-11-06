@@ -43,6 +43,9 @@ function findCourseById(courseId) {
     };
 }
 
+
+console.log("");
+console.log("Proj200 starts:");
 // Find the start date 
 let proj500Course = courses.find(findCourseById("PROJ500"));
 
@@ -53,7 +56,8 @@ if (proj500Course) {
 }
 
 
-
+console.log("");
+console.log("Title of PROJ500 course:");
 // Output the title of the PROJ500 course
 if (proj500Course) {
     console.log(proj500Course.Title); // Correctly outputs the title 
@@ -71,7 +75,7 @@ function findClassesInClassroom(classroom) {
 }
 
 
-
+console.log("");
 // Find all courses that are in Classroom 1
 let classroom1Courses = courses.filter(findClassesInClassroom("Classroom 1"));
 
@@ -82,7 +86,7 @@ if (classroom1Courses.length > 0) {
     console.log("No classes in Classroom 1");
 }
 
-
+console.log("");
 // function to find cheap courses
 function findCheapCourses(course) {
     let fee = parseFloat(course.Fee);
